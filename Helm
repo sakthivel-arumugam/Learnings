@@ -60,3 +60,9 @@ Scales Back to Zero
 If no new events occur, KEDA scales the deployment back to zero to save resources.
 
 ![Image](https://github.com/user-attachments/assets/9dd03c5d-ac5a-4b32-bc79-b18890095d58)
+
+https://sgithub.fr.world.socgen/Pegasus/nuvo-architecture/wiki/Helm-overview-and-usage
+
+The **Service object** is what allows the application to be exposed internally: behind the scenes, it creates a VIP to access the service within Kubernetes that automatically load-balances traffic across all available pods. **The pods related to the service are identified using labels: all pods that have the label defined in the Service's configuration will be considered as pods that can accept traffic for the service**
+The **Deployment object** defines, as the name suggests, how the application is supposed to be deployed. It lists the containers (init and main ones), the image they are to run, their resource allocation **(RAM and CPU), the amount of replicas, the volumes they need to mount, the various Kubernetes monitoring probes**, etc.
+The **Ingress object** defines **the exposition of the application outside of Kubernetes:** since we expose web services to users within the SG network, it is necessary for us to make our services accessible from anywhere on the GBIS network that isn't necessarily part of the Kubernetes cluster
