@@ -1,3 +1,5 @@
+https://github.com/iomegak12/socgen-ai-training/tree/main#
+
 init (Introduced in C# 9): -> set a property only during object initialization, Once the object is constructed, the property becomes immutable.
 public string Name { get; init; }
 private set: -> property can be modified only within the class itself and not from outside the class.
